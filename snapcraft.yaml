@@ -1,0 +1,17 @@
+name: mandelbrot-rust
+version: git
+summary: A mandelbrot image drawer written in Rust
+description: |
+  Draws .bmp files for a specific location. 
+
+base: core20
+confinement: devmode
+
+parts:
+  mandelbrot-rust:
+    plugin: rust
+    source: .
+
+apps:
+  mandelbrot-rust:
+    command: bin/mandelbort-rust
